@@ -1,9 +1,5 @@
-# 🚗 AlugaFacil
+# 🚗 Projeto AlugaFacil
 
-![Django](https://img.shields.io/badge/Django-3.2-green?style=for-the-badge&logo=django)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5-blue?style=for-the-badge&logo=bootstrap)
-![HTML](https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5)
-![CSS](https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3)
 
 ## 📌 Sobre
 
