@@ -1,0 +1,15 @@
+
+<nav class="container__header__nav">
+  
+    <a class="container__header__nav__link" href="{% url 'index' %}">Home</a>
+    <a class="container__header__nav__link" href="{% url 'rent_car_user' %}">Seus carros alugados</a>
+    <a class="container__header__nav__link" href="{% url 'about' %}">Quem Somos</a>
+    {% if user.is_authenticated %}
+      <a class="container__header__nav__link" href="{% url 'logout_user' %}">Logout</a>
+      <a class="container__header__nav__link" href="{% url 'profile_user' %}">Perfil</a>
+    {% else %}
+      <a class="container__header__nav__link" href="{% url 'login' %}">Login</a>
+      <a class="container__header__nav__link" href="{% url 'create_user' %}">Cadastro</a>
+    {% endif %}
+
+</nav>

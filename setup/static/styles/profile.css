@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* inicio de pagina de perfil */
+
+.container__section__profile{
+    /* margin: 2% 0 5%; */
+    padding: 4% 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container__section__profile p{
+    text-wrap:initial;
+}
+
+.container__section__profile__links{
+    padding: 4% 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container__section__profile__form{
+    padding: 4% 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container__section__profile h2{
+    text-align: center;
+}
+
+.name__title__section{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.form__section__profile__update_data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form__field__change__password{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form__update__email, .form__update__first__name, .form__update__last__name, 
+.form__update__phone__number, .form__update__cpf{
+    width: 370px;
+    height: 40px;
+    padding: 1%;
+    border: 1px solid;
+    border-radius: 4px 0 0 4px;
+    color: #000000;
+} 
+
+
+/*  */
+
+.form__update__data__button{
+    width: 170px;
+    height: 30px;
+    padding: 0; 
+    border: 2px solid black;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form__update__data__button button{
+    text-align: center;
+    background-color: transparent;
+}
+.form__update__data__button:hover {
+    background-color: #f4be37;
+}
+
+
+
+/* pagina de alterar senha */
+
+.container__section__change__password{
+    padding: 4% 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form__section__change__password{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form__field__change__password{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form__update__password{
+    width: 370px;
+    height: 40px;
+    padding: 1%;
+    border: 1px solid;
+    border-radius: 4px 0 0 4px;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.form__button__group__change__password{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form__change__password__button{
+    width: 170px;
+    height: 30px;
+    padding: 0; 
+    border: 2px solid black;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form__change__password__button button{
+    text-align: center;
+}
+
+
+.form__change__password__button:hover{
+    background-color: #f4be37;
+}
+
+
+/* pagina de deletar conta */
+
+.container__section__delete__account{
+    padding: 4% 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form__section__delete__account{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form__button__group__delete__account{
+    padding: 8%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form__button__delele__account{
+    width: 170px;
+    height: 30px;
+    padding: 0; 
+    border: 2px solid black;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+.form__button__delele__account:hover{
+    background-color:#f4be37;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container__section__profile{
+        flex-direction: column;
+    }
+    
+    .form__update__email, .form__update__first__name, .form__update__last__name, 
+    .form__update__phone__number, .form__update__cpf{
+        width: 18rem;
+    }
+    
+    
+    .form__update__password{
+        width: 18rem;
+    }
+
+
+    .form__change__password__button{
+        width: 8.5rem;
+        height: 30px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .form__change__password__button:hove{
+        background-color: #f4be37;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+
+    .form__button__delele__account{
+        width: 8.5rem;
+        height: 30px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .form__button__delele__account:hover{
+        background-color: #f4be37;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}

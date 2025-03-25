@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Lista de carros{% endblock %}
+
+{% block content %}
+
+    <section>
+        {% if cars %}
+            {% for car in cars %}
+               <a href="{% url 'detail_car' car.pk %}"><img src="{{ car.car_image.thumb.url }}"></a>
+            {% endfor %}
+        {% else %}
+            <h2>Não há carros disponíveis.</h2>
+        {% endif %}
+    </section>
+
+{% endblock %}

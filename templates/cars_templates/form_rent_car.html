@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Formulário de locação{% endblock %}
+
+{% block search_bar %}{% endblock %}
+
+{% block content %}
+
+    <section class="container__section__rent__car">
+        <h2>Ficha de locação</h2>
+        <form class="form__section__rent__car" method="POST">
+            {% csrf_token %}
+
+            <div class="form__field__date__rent__car">
+                <label>Data para recebimento</label>
+                <input type="date" name="rent_date" id="rent_date" required>
+            </div>
+            
+            <div class="form__field__date__rent__car">
+                <label>Data de devolução</label>
+               <input type="date" name="return_date" id="return_date" required>
+            </div>
+            <div class="form__button__group__rent__car">
+                <button  class="form__rent_car__button" type="submit">Confirmar</button>
+                <a class="form__rent_car__button" href="{% url 'index'%}">Cancelar</a>
+            </div>
+        </form>
+    </section>
+
+{% endblock %}

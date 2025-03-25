@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <section class="container__section__car">
+        <div class="container__section__car__maker__car">
+            {% if maker_cars %}
+                {% for maker in maker_cars %}
+                    <a class="container__section__maker__car__link" href="{% url 'maker_list' maker.pk %}">{{ maker }}</a>
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="container__section__car__list">
+            {% if cars %}
+                {% for car in cars %}
+                    <a href="{% url 'detail_car' car.pk %}"><img src="{{ car.car_image.thumb.url }}"></a>
+                {% endfor %}
+            {% else %}
+                <p>Não há carros disponíveis</p>
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock %}

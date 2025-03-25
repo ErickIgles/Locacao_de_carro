@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    
+    <section class="container__section__search__car">
+        <h2>Resultado da pesquisa...</h2>
+        {% if cars %}
+            <div class="container__section__search__car__list">
+                {% for car in cars %}
+                    <a href="{% url 'detail_car' car.pk %}"><img src="{{ car.car_image.thumb.url }}"></a>
+                {% endfor %}      
+            </div>
+        {% else %}
+            <H2>Nenhum carro encontrado</H2>
+        {% endif %}
+    </section>
+
+{% endblock %}

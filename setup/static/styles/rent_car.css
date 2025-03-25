@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.container__section__car__rent{
+    padding: 4% 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    border-radius: 4px;
+}
+
+
+h2{
+    white-space: nowrap;
+}
+
+.container__section__list__car__rent{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.list__car__information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:left;
+}
+
+.cancel__car__rent{
+    margin: 15px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.container__section__list__car__rent div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.form__button{
+    width: 170px;
+    height: 30px;
+    padding: 0; 
+    border: 2px solid black;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form__button:hover {
+    background-color: #f4be37;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.container__section__list__car__rent:hover{
+    color: #f4be37;
+}
+
+
+@media screen and (max-width: 768px){
+    .container__section__car__rent{
+        padding: 8% 8%;
+    }
+    
+    .container__section__list__car__rent{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .form__button:hover {
+        background-color: #f4be37;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .list__car__information{
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+    }
+
+    img{
+        width: auto;
+        height: auto;
+    }
+}

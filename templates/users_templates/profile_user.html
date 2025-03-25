@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Perfil do Usuário{% endblock %}
+
+{% block search_bar %}{% endblock %}
+
+
+{% block content %}
+
+    <section class="container__section__profile">
+        <div class="container__section__profile__form">
+            <h2 class="name__title__section">Dados do Usuário</h2>
+            <form class="form__section__profile__update_data" method="POST" action="{% url 'update_data' %}">
+                {% csrf_token %}
+                <div class="form__field__change__password">
+                    <label>E-mail</label>
+                    <input class="form__update__email" type="email" name="email" id="email" placeholder="E-mail" value="{{ user.email }}" required>
+                </div>
+                <div class="form__field__change__password">
+                    <label>Primeiro Nome</label>
+                    <input class="form__update__first__name" type="text" name="first_name" id="first_name" placeholder="Nome" value="{{ user.first_name}}" required>
+                </div>
+                <div class="form__field__change__password">
+                    <label>Sobrenome</label>
+                    <input class="form__update__last__name" type="text" name="last_name" id="last_name" placeholder="Sobrenome" value="{{ user.last_name }}" required>
+                </div>
+                <div class="form__field__change__password">
+                    <label>Número para contato</label>
+                    <input class="form__update__phone__number" type="number" name="phone_number" id="phone_number" placeholder="Telefone" value="{{ user.phone_number }}" required>
+                </div>
+                <div class="form__field__change__password">
+                    <label>CPF</label>
+                    <input class="form__update__cpf" type="text" name="cpf" id="cpf" placeholder="CPF" value="{{ user.cpf }}" required>
+                </div>
+                <button type="submit" class="form__update__data__button">Atualizar</button>
+            </form>
+            <p>Para alteração de dados basta colocar novas infomações e apertar no botão 'Atualizar'.</p>
+        </div>
+
+        <div class="container__section__profile__links">
+            <p>Configurações de conta</p>
+            <a href="{% url 'update_password' %}">Editar senha</a>
+            <a href="{% url 'delete_account' %}">Apagar Conta</a>
+        </div>
+    </section>
+
+{% endblock %}

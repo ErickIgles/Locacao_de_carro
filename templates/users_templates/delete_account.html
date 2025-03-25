@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Deletar conta{% endblock %}
+
+{% block search_bar %}{% endblock %}
+
+{% block content %}
+
+    <section class="container__section__delete__account">
+        <form class="form__section__delete__account" method="POST" action="{% url 'delete_account'%}">
+            {% csrf_token %}
+            <p>Deseja apagar a conta <strong>{{ user.get_full_name }}<strong>?</p>
+            
+            <div class="form__button__group__delete__account">
+                <button class="form__button__delele__account" type="subtmit">Apagar</button>
+                <a class="form__button__delele__account" href="{% url 'profile_user' %}">Cancelar</a>
+            </div>
+        </form>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Informações do carro{% endblock %}
+{% block search_bar %}{% endblock %}
+
+
+{% block content %}
+    <section class="container__section__detail__car">
+        {% if car %}
+            <img src="{{ car.car_image.thumb.url }}">
+            <p>Fabricante: {{car.car_maker}}</p>
+            <p>Modelo: {{car.car_model}}</p>
+            <p>Ano: {{car.car_year}}</p>
+            <p>Valor da diária: {{car.car_daily_price}}</p>
+            <p>Cor do carro: {{car.car_color}}</p>
+           
+            {% if status_car %}
+                <p>Status: <strong>disponível para aluguel</strong></p>
+                <div>
+                    <a class="container__content__detail__form__link" href="{% url 'form_rent_car' car.pk %}">Alugar</a>
+                </div>
+                
+            {% else %}
+                <p>Status: <strong>Indiponível para aluguel</strong></p>
+            {% endif %}
+        {% else %}
+            <p>Não há carros disponíveis</p>
+        {% endif %}
+    </section>
+{% endblock %}

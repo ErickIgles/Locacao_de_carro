@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'styles/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/authenticated/register_user.css' %}">
+
+    <title>Registro de Usuário</title>
+</head>
+<body>
+    <header></header>
+
+    <main class="container__register__user">
+        <h1>AlugaFácil</h1>
+        <h2>Cadastre-se</h2>
+        <form class="form__register__user" method="POST" action="{% url 'create_user' %}">
+                {% csrf_token %}
+            <div>
+                <input class="form__email" type="email" name="email" id="email" placeholder="E-mail" required>
+            </div>
+            <div>
+                <input class="form__first__name" type="text" name="first_name" id="first_name" placeholder="Nome" required>
+            </div>
+            <div>
+                <input class="form__last__name" type="text" name="last_name" id="last_name" placeholder="Sobrenome" required>
+            </div>
+            <div>
+                <input class="form__phone__number" type="number" name="phone_number" id="phone_number" placeholder="Telefone" required>
+            </div>
+            <div>
+                <input class="form__cpf" type="text" name="cpf" id="cpf" placeholder="CPF" required>
+            </div>
+            <div>
+                <input class="form__password" type="password" name="password1" id="password1" placeholder="Informe uma senha" required>
+            </div>
+            <div>
+                <input class="form__password" type="password" name="password2" id="password2" placeholder="Confirme a sua senha" required>
+            </div>
+            <button class="form__button" type="submit">Cadastrar</button>
+        </form>
+    </main>
+
+    <footer></footer>
+</body>
+</html>

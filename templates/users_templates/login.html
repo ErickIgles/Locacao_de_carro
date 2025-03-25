@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'styles/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/authenticated/login.css' %}">
+    <title>Login</title>
+
+</head>
+<body>
+    <header></header>
+
+    <main class="container__login">
+        <h1>AlugaFácil</h1>
+        <h2>Login</h2>
+        <form class="form__group" method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div>
+                <input class="form__email" type="email" name="email" id="email" placeholder="E-mail" required>
+            </div>
+            <div>
+                <input class="form__password" type="password" name="password" id="password" placeholder="Informe uma senha" required>
+            </div>
+            <div class="button__group">
+                <button class="form__button" type="submit">Logar</button>
+                <a class="form__button" href="{% url 'create_user' %}">Cadastro</a>
+            </div>
+        </form>
+    </main>
+
+    <footer></footer>
+</body>
+</html>

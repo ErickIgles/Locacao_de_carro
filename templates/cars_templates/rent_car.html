@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Carros alugados{% endblock %}
+
+{% block search_bar %}{% endblock %}
+
+
+{% block content %}
+
+    
+    <div>
+        <h2>Seus carros alugados</h2>
+        {% if messages %}
+            {% for msg in messages %}
+                {{ msg }}
+            {% endfor%}
+        {% endif %}
+    </div>
+    <section class="container__section__car__rent">
+        {% if rented_cars %}
+            {% for car_rent in rented_cars %}
+                <div class="container__section__list__car__rent">
+                    <img src="{{ car_rent.car.car_image.thumb.url }}" alt="{{ car_rent.car.car_model}}">
+                    <div class="list__car__information"><p>Marca: <strong>{{ car_rent.car.car_maker }}</strong></p></div>
+                    <div class="list__car__information"><p>Modelo: <strong>{{ car_rent.car.car_model }}</strong></p></div>
+                    <div class="list__car__information"><p>Data de aluguel: <strong>{{ car_rent.rent_date }}</strong></p></div>
+                    <div class="list__car__information"><p>Data de develução: <strong>{{ car_rent.return_date }}</strong></p></div>
+                    <div  class="list__car__information"><p>valor do aluguel: <strong>{{value_rent}}</strong></p></div>
+                    <div class="cancel__car__rent">
+                        <p><strong>Cancelar Locação</strong></p>
+                        <form method="POST" action="{% url 'car_return' car_rent.car.pk %}">
+                            {% csrf_token %}
+                            <button class="form__button" type="submit">Cancelar</button>
+                        </form>
+                    </div>
+                    
+                </div>
+        <!-- <p>Há carros alugados</p> -->
+            {% endfor %}
+        {% else %}
+            <p>Não há carros alugados</p>
+        {% endif %}
+    </section>
+
+{% endblock %} 
