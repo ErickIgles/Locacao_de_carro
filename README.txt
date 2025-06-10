@@ -1,9 +1,9 @@
-# 🚗 Projeto AlugaFacil
+# 🚗 Projeto AlugaFácil
 
 
 ## 📌 Sobre
 
-AlugaFacil é uma plataforma responsiva para aluguel de carros, permitindo que usuários realizem cadastros, façam login e pesquisem por veículos disponíveis. O sistema inclui:
+AlugaFácil é uma plataforma responsiva para aluguel de carros, permitindo que usuários realizem cadastros, façam login e pesquisem por veículos disponíveis. O sistema inclui:
 
 - 🔹 Barra de pesquisa e filtragem por marcas.
 - 🔹 Página de detalhes do veículo com informações completas.
